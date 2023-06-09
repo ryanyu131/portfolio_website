@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2b136d4eef.js" crossorigin="anonymous"></script>
+    <title>Portfolio Website</title>
+</head>
+<body>
+<!-- header -->
+<div id="header">
+   <div class="container">
+        <nav>
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://drive.google.com/file/d/13XMUByYFqLMwgkUpskKTsHzIUhq_k8I4/view?usp=sharing" target="_blank">Resumé</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Computer Science Student</p>
+            <h1>Ryan Yu</h1><br>
+            <h3>I am... <span class="auto-type"></span></h3>
+        </div>
+   </div> 
+</div>
+
+<!-- about -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.jpg">
+            </div>
+            <div class="about-col-2">
+                <h2 class="sub-title">About Me</h2>
+                <p>Currently a Computer Science student attending Toronto Metropolitan
+                   University (formerly known as Ryerson University). I enjoy coding, playing hockey, video games,
+                   and recently bouldering during my free time. I am currently looking for a Co-op position
+                   and am always eager to learn more!</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('languages')">Languages</p>
+                    <p class="tab-links" onclick="opentab('frameworks')">Frameworks</p>
+                </div>
+                <div class="tab-contents active-tab" id="languages">
+                    <ul>
+                        <li><span>Python</span><br>Software Programming</li>
+                        <li><span>Java</span><br>Software Programming</li>
+                        <li><span>HTML</span><br>Web App Structuring</li>
+                        <li><span>CSS</span><br>Web App Design</li>
+                        <li><span>JavaScript</span><br>Web App Development</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="frameworks">
+                    <ul>
+                        <li><span>React</span><br>User Interface Development</li>
+                        <li><span>Node.js</span><br>Server-Side Web App Structure & Styling</li>
+                        <li><span>Tailwind CSS</span><br>Smooth & Efficient CSS Styling</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Portfolio -->
+<div id="portfolio">
+    <div class="container">
+        <h2 class="sub-title">Portfolio</h2>
+        <div class="project-list">
+            <div>
+                <i class="fa-brands fa-html5"></i>
+                <i class="fa-brands fa-css3-alt"></i>
+                <h2>Clarity MK1</h2>
+                <p>Designed for the purpose to be used as a presentation.<br><br>
+                   This static website was created for a group of engineering students for their final year project.<br><br>
+                   Base design built with Hugo.io static site generator.</p>
+                <a href="https://blind-adventure-consulting.github.io/clarity-mk1/"><u>Website</u></a>
+            </div>
+            <div>
+                <i class="fa-brands fa-react"></i>
+                <i class="fa-brands fa-square-js"></i>
+                <h2>Crypto Explorer</h2>
+                <p>Website interface designed and created using React.<br><br>
+                   Retrieves real-time data on current top cryptocurrencies such as market cap through CoinGecko API.</p>
+                <a href="#">Soon Deploying</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-react"></i>
+                <i class="fa-solid fa-fire"></i>
+                <h2>Startup Photography</h2>
+                <p>Project still a work in progress.<br><br>
+                   Designing a startup business website for a photographer/videographer.<br><br>
+                   Intending to use Firebase as a storage for photos and videos.<br><br>
+                   Website currently being built using React.
+                </p>
+                <a href="#">Work in progress</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- contact -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h2 class="sub-title">Contact Me</h2>
+                <p><i class="fa-regular fa-paper-plane"></i> ryan.yu131@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> 4168057005</p>
+                <div class="social-icons">
+                    <a href="https://github.com/ryanyu131"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/ryan-yu131/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="images/Ryan_Yu_Resume_2023.pdf" download class="btn btn2">Download Resumé</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div> <!-- Make contact form working when ready -->
+    </div>
+    <div class="copyright">
+        <p>© Ryan Yu made in 2023</p>
+    </div>
+</div>
+
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<script>
+    var typed = new Typed(".auto-type", {
+        strings: ["an aspiring Web Developer", "looking for a Co-op Internship Position", "eager to Refine & Learn New Skills", "a Gamer!"],
+        typeSpeed: 100,
+        backSpeed: 75,
+        loop: true
+    })
+</script>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+</body>
+</html>
